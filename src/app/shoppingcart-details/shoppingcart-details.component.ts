@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
+import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-shoppingcart-details',
@@ -7,7 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingcartDetailsComponent implements OnInit {
 
-  constructor() { }
+  @Input() item:Item;
+  @Output() upVoting = new EventEmitter<boolean>();
+  @Output() downVoting = new EventEmitter<boolean>();
+  
+  upVotes(vote: boolean){
+    this.upVoting.emit(vote);
+  }
+
+  downVotes(vote: boolean){
+    this.downVoting.emit(vote);
+  }
+
+    constructor() { }
 
   ngOnInit(): void {
   }

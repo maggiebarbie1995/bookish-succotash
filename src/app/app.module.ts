@@ -5,15 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShoppingcartDetailsComponent } from './shoppingcart-details/shoppingcart-details.component';
 import { ShoppingcartFormComponent } from './shoppingcart-form/shoppingcart-form.component';
-import { ShoppingcartComponent } from './shoppingcart/shoppingcart.component';
+import { ShoppingCartComponent } from './shoppingcart/shoppingcart.component';
+import { TimeAgoPipe } from './time-ago.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShoppingcartDetailsComponent,
     ShoppingcartFormComponent,
-    ShoppingcartComponent
-  ],
+    ShoppingCartComponent,
+    TimeAgoPipe,
+    HighlightDirective
+  ]
   imports: [
     BrowserModule,
     AppRoutingModule
