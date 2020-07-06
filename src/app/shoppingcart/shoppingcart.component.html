@@ -1,37 +1,23 @@
 <div class="body container">
-  <div class="row">
-    <div class="card-columns">
-  
-      <div class="card" *ngFor='let item of items;let i = index'>
-          <div class="card">
+  <div class="grid">
+    <div class="card-columns">  
+      <div class="card" *ngFor='let item of ProductItems;let i = index'>
+        <div class>
+          <img [src]="item.imageUrl"
+            alt="{{item.name}}">
+        </div>         
+        <div class="card">
           <div  class="container">
           <p class="fa fa-item-left"></p>
-          <p appHighlight >{{item.text}} </p>
+          <h1>{{item.name}}</h1>
           <p>{{item.price}}</p>
-        </div>
-        <div class="card-footer">
-          <app-shoppingcart-details [item]='item'></app-shoppingcart-details>
-          <span (click)="delete(i)" class="del">
-            <i class="fa fa-trash"></i>
-          </span>
-        </div>
-  
-        <div class="card-footer">
-          <div class="row">
-            <div class="col-3 action">
-              {{shoppincart.upvotes}}
-            </div>
-            <div class="col-3 action" (click)="shoppingcart.upvotes = shoppingcart.upvotes + 1">
-              <i class="fa fa-subtract"></i>
-            </div>
-            <div class="col-3 action" (click)="shoppingcart.downvotes = shoppingcart.downvotes + 1">
-              <i class="fa fa-add"></i>
-            </div>
-            <div class="col-3 action">
-              {{shoppingcart.downvotes}}
-            </div>
-          </div>
-        </div>
+          <button class="btn btn-primary"
+          role="button"
+          id={{item.id}}
+          (click)="onCartUpdated($event)">
+          Add to Cart
+          </button>
+        </div>       
       </div>
     </div>
   </div>

@@ -1,0 +1,13 @@
+.panel-heading > div {
+    flex-grow: 1;
+}
+.panel-heading {
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-between;
+    color:blue;
+    display: flex;
+    text-align: center;
+}
+.panel-footer {
+    text-align: right;
+}

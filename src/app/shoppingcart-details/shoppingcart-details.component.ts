@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { EventEmitter } from 'events';
+import { Item } from '../shoppingcart';
 
 @Component({
   selector: 'app-shoppingcart-details',
@@ -7,19 +8,22 @@ import { EventEmitter } from 'events';
   styleUrls: ['./shoppingcart-details.component.css']
 })
 export class ShoppingcartDetailsComponent implements OnInit {
-
-  @Input() item:Item;
-  @Output() upVoting = new EventEmitter<boolean>();
-  @Output() downVoting = new EventEmitter<boolean>();
+   total:number = 0;
+  @Input() Item:number;
+  @Input() Items:Item[];
+  @Output() ItemDeleted = new EventEmitter<{productId:number}>();
+  @Output() ItemChanged = new EventEmitter<{productId:number}>();
   
-  upVotes(vote: boolean){
-    this.upVoting.emit(vote);
+  onItemDeleted(productData:{productId: number}) {
+    this.ItemDeleted.emit({
+        productId: productData.productId
+      });    
   }
-
-  downVotes(vote: boolean){
-    this.downVoting.emit(vote);
+  onItemChanged(productData:{productId: number}) {
+    this.ItemChanged.emit({
+        productId: productData.productId
+      });    
   }
-
     constructor() { }
 
   ngOnInit(): void {

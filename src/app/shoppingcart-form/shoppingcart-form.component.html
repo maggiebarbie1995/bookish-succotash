@@ -13,19 +13,20 @@
   
       <div class="form-group">
         <label for="price-input">Price</label>
-        <input class="form-control" type="text" [(ngModel)]="itemModel.price" name="price" id="price-input" placeholder="Item Price" required>
+        <input Id="total price-input" class="form-control" type="text" [(ngModel)]="ItemModel.total price" name="total price" placeholder="Item Price" required>
       </div>
   
       <div class="form-group">
         <label for="quantity-input">Quantity</label>
         <input id="quantity-input" class="form-control" type="text" [(ngModel)]="itemModel.quantity" name="quantity" placeholder="Item name" required>
       </div>
-  
-      <button type="submit" class="btn btn-secondary">{{submitType}}</button>
+
+      <div class="form-group">
+        <label for="total price-input">Total price</label>
+        <input id="total price-input" class="form-control" type="text" [(ngModel)]="itemModel.total price" name="total price" placeholder="Item name" required>
+      </div>
+      <button type="submit" class="btn btn-secondary"> {{submitType}}</button>
     </form>
   </div>
-
-
-
 </div>
 <!-- <p>shoppingcart-form works!</p> -->

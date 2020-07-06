@@ -1,0 +1,18 @@
+body,
+html {
+  margin: 0;
+  height: 100%;
+  text-align: center;
+  padding: 70px;
+  color: white;
+}
+p {
+  font-size: 22px; 
+  line-height: 40px;
+  font-family: sans-serif;
+  text-align: center;
+}
+.product-item img{
+  max-width: 100%;
+  max-height: 200px;
+}
