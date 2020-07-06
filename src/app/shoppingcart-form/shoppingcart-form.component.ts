@@ -6,14 +6,14 @@ import { Item } from '../shoppingcart';
   styleUrls: ['./shoppingcart-form.component.css']
 })
 export class ShoppingcartFormComponent implements OnInit {
-  newItem = new Item ("","","",0,0, new Date());
+  newItem = new Item ("","","","","",new Date(),0);
 
   @Output() addItem = new EventEmitter<Item>();
 
   submitItem(){
     this.addItem.emit(this.newItem);
     alert("Your Item has been added.You can also add another one.");
-    this.newItem = new Item (" ", " "," ",0,0, new Date())
+    this.newItem = new Item (" ", " "," ","","",new Date(),0);
   }
 
 

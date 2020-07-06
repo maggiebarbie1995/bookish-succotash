@@ -1,12 +1,15 @@
 export class Item {
     public showItemDetails: boolean;
-    constructor (public itemName: string,
+  name: string;
+  id: any;
+    constructor ( 
+       public itemName: string,
        public itemValue: string,
        public price:string,
        public quantity:string,
-       public totalPrice:string,
-       public date:string,
-       public item:number ) {
+       public total:string,
+       public date:Date,
+       public Item:number ) {
       this.showItemDetails = false;
     }
   }

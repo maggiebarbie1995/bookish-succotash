@@ -13,7 +13,7 @@
   
       <div class="form-group">
         <label for="price-input">Price</label>
-        <input Id="total price-input" class="form-control" type="text" [(ngModel)]="ItemModel.total price" name="total price" placeholder="Item Price" required>
+        <input id="price-input" class="form-control" type="text" [(ngModel)]="itemModel.price" name="price" placeholder="Item_Price" required>
       </div>
   
       <div class="form-group">
@@ -22,10 +22,10 @@
       </div>
 
       <div class="form-group">
-        <label for="total price-input">Total price</label>
-        <input id="total price-input" class="form-control" type="text" [(ngModel)]="itemModel.total price" name="total price" placeholder="Item name" required>
+        <label for="total-input">Total</label>
+        <input id="total-input" class="form-control" type="text" [(ngModel)]="itemModel.total" name="total" placeholder="Item name" required>
       </div>
-      <button type="submit" class="btn btn-secondary"> {{submitType}}</button>
+      <button type="submit" class="btn btn-secondary">submit</button>
     </form>
   </div>
 </div>

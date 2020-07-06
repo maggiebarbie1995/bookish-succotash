@@ -11,8 +11,8 @@ export class ShoppingcartDetailsComponent implements OnInit {
    total:number = 0;
   @Input() Item:number;
   @Input() Items:Item[];
-  @Output() ItemDeleted = new EventEmitter<{productId:number}>();
-  @Output() ItemChanged = new EventEmitter<{productId:number}>();
+  @Output() ItemDeleted = new EventEmitter<{Id:number}>();
+  @Output() ItemChanged = new EventEmitter<{Id:number}>();
   
   onItemDeleted(productData:{productId: number}) {
     this.ItemDeleted.emit({
@@ -22,6 +22,7 @@ export class ShoppingcartDetailsComponent implements OnInit {
   onItemChanged(productData:{productId: number}) {
     this.ItemChanged.emit({
         productId: productData.productId
+        
       });    
   }
     constructor() { }
