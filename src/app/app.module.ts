@@ -7,19 +7,18 @@ import { ShoppingcartDetailsComponent } from './shoppingcart-details/shoppingcar
 import { ShoppingcartFormComponent } from './shoppingcart-form/shoppingcart-form.component';
 import { ShoppingCartComponent } from './shoppingcart/shoppingcart.component';
 import { TimeAgoPipe } from './time-ago.pipe';
-import { ProductItem,Item } from '../shoppingcart';
 import { EventEmitter } from 'events';
+import { ProductItem } from './shoppingcart';
 
 @NgModule({
-  declarations: [
-    AppComponent,
+  declarations:[
+    
     ShoppingcartDetailsComponent,
     ShoppingcartFormComponent,
     ShoppingCartComponent,
-    TimeAgoPipe,    
-    ProductItem,Item,
-    EventEmitter
-  ]
+    TimeAgoPipe,  
+    ProductItem,  
+  ],
   imports:[
     BrowserModule,
     AppRoutingModule,
